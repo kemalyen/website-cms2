@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+		%svelte.head%
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9f5b961ee2.js" crossorigin="anonymous"></script>		
+	</head>
+	<body>
+
+		<div id="preloader">
+			<div id="status"></div>
+		</div>
+		<nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+			<div class="container">
+				<div class="navbar-brand">
+					<a class="navbar-item" href="/">
+						Send<span class="altcolor">Box</span>
+					</a>
+		
+					<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</a>
+				</div>
+		
+				<div id="navbar-menu" class="navbar-menu is-static">
+					<div class="navbar-end">
+						<a href="/#features" class="navbar-item is-secondary">
+							Features
+						</a>
+						<a href="/how-works" class="navbar-item is-secondary">
+							How it works
+						</a>
+						<a href="/what-next" class="navbar-item is-secondary">
+							What's Next?
+						</a>                          
+						<a href="/docs" class="navbar-item is-secondary">
+							Docs
+						</a>
+						<a href="/demo" class="navbar-item is-secondary">
+							Demo
+						</a>          
+						<a href="/#contact" class="navbar-item is-secondary">
+							Contact
+						</a>                      
+						<a class="navbar-item" href="/get-started">
+							<span class="button signup-button rounded secondary-btn raised">
+								Get Started
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>		
+		<div id="svelte">%svelte.body%</div>
+		<footer class="footer footer-dark">
+			<div class="container">
+			  <div class="columns">
+				<div class="column">
+				  <div class="footer-logo">
+					&copy; 2021 SendBox All right reserved
+					<p>
+					  <small>13 Sorrells Close Basingstoke RG24 8TB United Kingdom</small>
+					</p>
+				  </div>
+				</div>
+				<div class="column">
+				  <div class="footer-column"></div>
+				</div>
+				<div class="column">
+				  <div class="footer-column">
+					<nav class="level is-mobile level-right">
+					  <div class="level-right">
+						<a class="level-item" href="https://github.com/sendboxuk">
+						  <span class="icon">
+							<ion-icon name="logo-github" size="large"></ion-icon>
+						  </span>
+						</a>
+		  
+						<a class="level-item" href="https://twitter.com/sendboxuk">
+						  <span class="icon">
+							<ion-icon name="logo-twitter" size="large"></ion-icon>
+						  </span>
+						</a>
+					  </div>
+					</nav>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </footer>
+		<script>
+		  if (window.netlifyIdentity) {
+		    window.netlifyIdentity.on("init", user => {
+		      if (!user) {
+			window.netlifyIdentity.on("login", () => {
+			  document.location.href = "/admin/";
+			});
+		      }
+		    });
+		  }
+		</script>
+
+	<!-- Concatenated JS -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+	<!-- Fresh JS -->
+	<script src="/assets/js/functions.js"></script>
+	<script src="/assets/js/main.js"></script>
+
+
+	</body>
+</html>
